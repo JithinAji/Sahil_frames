@@ -54,7 +54,6 @@ body{
 }
 
 #footer{
-    font-weight: bold;
     margin-left: auto;
     margin-right: auto;
     line-height: 0.8rem;
@@ -86,9 +85,5 @@ body{
     #footer{
         margin: auto;
     }
-    #footer p{
-        line-height: 1.2rem;
-    }
-    
   }
 
