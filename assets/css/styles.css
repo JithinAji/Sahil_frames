@@ -86,6 +86,9 @@ body{
     #footer{
         margin: auto;
     }
+    #footer p{
+        line-height: 1.2rem;
+    }
     
   }
 
