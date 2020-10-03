@@ -7,10 +7,17 @@
     <link rel="stylesheet" href="public/styles.css" />
     <!-- style sheet for animation -->
     <link rel="stylesheet" href="public/new.css">
+    <!-- lozad for lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad"></script>
     <!-- font roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- for lozad to work -->
+    <script>
+      const observer = lozad(); // lazy loads elements with default selector as ".lozad"
+      observer.observe();
+    </script>
     <title>Sahil P Jose</title>
   </head>
   <body>
@@ -67,7 +74,7 @@
           <div class="flex flex-col mx-auto">
             <img
               src="public/assets/gallery/pro1.jpeg"
-              class="h-64 w-64 mx-auto rounded-full m-6"
+              class="h-64 w-64 mx-auto rounded-full m-6 lozad"
               alt=""
             /> 
             <p class="text-6xl text-white text-center p-2">Sahil P Jose</p>
@@ -101,43 +108,43 @@
       <p class="text-white text-4xl text-center pt-6 ">Gallery</p>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 p-12">
       <div class="col-span-1 md:col-span-3 row-span-3"> 
-        <img src="public/assets/gallery/4.jpeg" loading=lazy alt="cricket photo of bat and ball">
+        <img class="lozad" src="public/assets/gallery/4.jpeg" alt="cricket photo of bat and ball">
       </div>
       <div class="row-span-2">
-        <img src="public/assets/gallery/8.jpeg" loading=lazy alt="a look at a tall building">
+        <img src="public/assets/gallery/8.jpeg" class="lozad" alt="a look at a tall building">
       </div>
       <div>
-        <img src="public/assets/gallery/1.jpeg" loading=lazy alt="sapling">
+        <img src="public/assets/gallery/1.jpeg" class="lozad" alt="sapling">
       </div>
       <div class="row-span-2">
-        <img src="public/assets/gallery/12.jpeg" loading=lazy alt="electric tower in dark">
+        <img src="public/assets/gallery/12.jpeg" class="lozad" alt="electric tower in dark">
       </div>
       <div class="row-span-2">
-        <img src="public/assets/gallery/13.jpeg" loading=lazy alt="another electric tower in dark">
+        <img src="public/assets/gallery/13.jpeg" class="lozad" alt="another electric tower in dark">
       </div>
       <div class="col-span-1 md:col-span-2 row-span-2">
-        <img src="public/assets/gallery/6.jpeg" loading=lazy alt="village scene">
+        <img src="public/assets/gallery/6.jpeg" class="lozad" alt="village scene">
       </div>
       <div class="row-span-2">
-        <img src="public/assets/gallery/5.jpeg" loading=lazy alt="beautiful pink flower">
+        <img src="public/assets/gallery/5.jpeg" class="lozad" alt="beautiful pink flower">
       </div>
       <div class="row-span-2">
-        <img src="public/assets/gallery/3.jpeg" loading=lazy alt="jackfruit">
+        <img src="public/assets/gallery/3.jpeg" class="lozad" alt="jackfruit">
       </div>
       <div class="col-span-1 md:col-span-2">
-        <img src="public/assets/gallery/7.jpeg" loading=lazy alt="carnival in kerala">
+        <img src="public/assets/gallery/7.jpeg" class="lozad" alt="carnival in kerala">
       </div>
       <div class="row-span-2">
-        <img src="public/assets/gallery/9.jpg" loading=lazy alt="mushrooms">
+        <img src="public/assets/gallery/9.jpg" class="lozad" alt="mushrooms">
       </div>
       <div class="row-span-3">
-        <img src="public/assets/gallery/11.jpeg" loading=lazy alt="too many flowers">
+        <img src="public/assets/gallery/11.jpeg" class="lozad" alt="too many flowers">
       </div>
       <div class="col-span-1 md:col-span-2">
-        <img src="public/assets/gallery/2.jpeg" loading=lazy alt="a tall tree without branches">
+        <img src="public/assets/gallery/2.jpeg" class="lozad" alt="a tall tree without branches">
       </div>
       <div class="row-span-2">
-        <img src="public/assets/gallery/10.jpeg" loading=lazy alt="friends talking under the light">
+        <img src="public/assets/gallery/10.jpeg" class="lozad" alt="friends talking under the light">
       </div>
     </div>
     </div>
