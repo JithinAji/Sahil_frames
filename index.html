@@ -13,15 +13,18 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Sahil P Jose</title>
   </head>
-  <body class="bg-black md:h-screen md:max-h-screen lg:overflow-hidden">
+  <body>
     <div id="mainPage">
+      <div class="bg-black" :class="{'lg:overflow-hidden': !showGallery, 'md:max-h-screen': !showGallery}">
       <!-- main page -->
     <transition name="bounce" mode="out-in">
     <div v-if="showIntro">
+      <p class="text-white text-center text-3xl p-6  md:mt-0 md:hidden">Photos By</p>
+          <p class="text-white text-center text-4xl pb-6 md:hidden">Sahil P Jose</p>
       <div class="flex flex-col md:flex-row md:h-screen max-w-screen-lg mx-auto">
-        <div class="w-1/2 flex flex-col m-auto relative justify-center mt-40 md:mt-20 mb-20">
+        <div class="w-1/2 flex flex-col m-auto relative justify-center mt-10 md:mt-20 mb-20">
           <div
-            class="min-h-1/2 md:w-2/3 md:ml-24 justify-center inline-block align-middle transform rotate-25 hover:rotate-0 rounded-md m-auto bg-white z-30 absolute shadow-lg"
+            class="min-h-1/2 md:w-2/3 md:ml-24 justify-center inline-block align-middle transform rotate-25 rounded-md m-auto bg-white z-30 absolute shadow-lg"
           >
             <img
             src="public/assets/gallery/thumbnail/12.jpg"
@@ -38,24 +41,24 @@
           >
           </div>
         </div>
-        <div class="w-full md:w-1/3 m-auto md:flex flex-col justify-center z-40 mt-32 md:mt-32">
-          <p class="text-white text-center text-3xl md:text-4xl z-40 m-2 -mt-24 md:mt-0">Photos By</p>
-          <p class="text-white text-center text-4xl md:text-6xl z-40 m-2">Sahil P Jose</p>
+        <div class="w-full md:w-1/3 m-auto md:flex flex-col justify-center z-40 md:mt-32">
+          <p class="text-white text-center text-3xl md:text-4xl z-40 m-2 -mt-24 md:mt-0 hidden md:block">Photos By</p>
+          <p class="text-white text-center text-4xl md:text-6xl z-40 m-2 hidden md:block">Sahil P Jose</p>
           <div class="flex justify-center m-4 mb-8">
-              <button class="btn bg-yellow-500 hover:bg-yellow-700 py-2 md:py-4 font-semibold mr-12">Gallery</button>
-              <button class="btn bg-gray-500 hover:bg-gray-700 py-2 md:py-4 font-semibold" v-on:click="showIntro = !showIntro">About</button>
+              <button class="btn bg-yellow-500 hover:bg-yellow-700 py-2 md:py-4 font-semibold mr-12" v-on:click="clickGallery">Gallery</button>
+              <button class="btn bg-gray-500 hover:bg-gray-700 py-2 md:py-4 font-semibold" v-on:click="clickContact">About</button>
           </div>
           <div class="flex justify-center m-4 mb-8">
-            <img class="text-white fill-current h-8 w-10 md:h-12 md:w-16 mr-6 transform hover:scale-110" src="public/assets/icons/facebook.svg"></img>
-            <img class="text-white h-8 w-10 md:h-12 md:w-16 transform hover:scale-110" src="public/assets/icons/instagram.svg"></img>
+            <a href="https://www.facebook.com/sahil.p.jose"><img class="text-white fill-current h-8 w-10 md:h-12 md:w-16 mr-6 transform hover:scale-110" src="public/assets/icons/facebook.svg"></img></a>
+            <a href="https://www.instagram.com/sahil_p_jose/"><img class="text-white h-8 w-10 md:h-12 md:w-16 transform hover:scale-110" src="public/assets/icons/instagram.svg"></img></a>
         </div>
       </div>
       </div> 
     </div>
     </transition>
       <!-- main page ended -->
-      <!-- <transition name="bounce" mode="out-in"> -->
-      <div v-if="!showIntro">
+      <transition name="bounce" mode="out-in">
+      <div v-if="showContact">
         <!-- contact section of the page -->
       <div class="flex flex-col md:flex-row max-w-screen-lg  mx-auto">
         
@@ -73,26 +76,78 @@
         <div class="md:h-screen md:w-1/2 flex flex-col">
           <div class="mx-auto my-auto p-6">
               <p class="text-white text-xl">
-                Pergo coctione, et ego, et tu oblivisci Pinkman. Obliviscendum hoc
-                unquam factum. Intelligamus hoc in sola SINGULTO multo aliter atque
-                fructuosa negotium structura. Malo B. Option. Ille vivere. Ut ad te
-                quaerebam ... purgare caeli. Sunt uh ... nonnullus propter errorem qui
-                de rebus inter nos et iacere puto suus in causa, id est in mensa. Levir
-                meus, priusquam oppugnarent tempus quis, admonere dicitur. Credo quod
-                idem mihi praesidium.
+                An IT employee by profession and photographer by passion. Before dismissing me like
+                 every other wanna be photographer who take not so bad looking pictures using 
+                 smartphones, I own a DSLR. If you don't know how to click even the greates of cameras 
+                 won't make you a good photographer. Perhaps a google pixel might make you an average
+                 photographer. The important thing is I know a thing or two and most people find my 
+                 pictures above average. I might be being too humble actually most people find my pictures great.
               </p>
               <div class="flex justify-center">
-                <button class="btn bg-gray-500 hover:bg-gray-700 w-1/3 py-2 mx-auto md:py-4 mt-4 font-semibold" v-on:click="showIntro = !showIntro">Back</button>
+                <button class="btn bg-gray-500 hover:bg-gray-700 w-1/3 py-2 mx-auto md:py-4 mt-4 font-semibold" v-on:click="clickBack">Back</button>
               </div>
               
             
           </div>
           </div>
-      </div>   
+      </div> 
+      </div>  
     <!-- contact section ended -->
 
+    <!-- Gallery of the page -->
+    <div v-if="showGallery">
+    <div class="max-w-screen-lg mx-auto ">
+      
+      <p class="text-white text-4xl text-center pt-6 ">Gallery</p>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 p-12">
+      <div class="col-span-1 md:col-span-3 row-span-3"> 
+        <img src="public/assets/gallery/4.jpeg" loading=lazy alt="cricket photo of bat and ball">
       </div>
-    <!-- </transition> -->
+      <div class="row-span-2">
+        <img src="public/assets/gallery/8.jpeg" loading=lazy alt="a look at a tall building">
+      </div>
+      <div>
+        <img src="public/assets/gallery/1.jpeg" loading=lazy alt="sapling">
+      </div>
+      <div class="row-span-2">
+        <img src="public/assets/gallery/12.jpeg" loading=lazy alt="electric tower in dark">
+      </div>
+      <div class="row-span-2">
+        <img src="public/assets/gallery/13.jpeg" loading=lazy alt="another electric tower in dark">
+      </div>
+      <div class="col-span-1 md:col-span-2 row-span-2">
+        <img src="public/assets/gallery/6.jpeg" loading=lazy alt="village scene">
+      </div>
+      <div class="row-span-2">
+        <img src="public/assets/gallery/5.jpeg" loading=lazy alt="beautiful pink flower">
+      </div>
+      <div class="row-span-2">
+        <img src="public/assets/gallery/3.jpeg" loading=lazy alt="jackfruit">
+      </div>
+      <div class="col-span-1 md:col-span-2">
+        <img src="public/assets/gallery/7.jpeg" loading=lazy alt="carnival in kerala">
+      </div>
+      <div class="row-span-2">
+        <img src="public/assets/gallery/9.jpg" loading=lazy alt="mushrooms">
+      </div>
+      <div class="row-span-3">
+        <img src="public/assets/gallery/11.jpeg" loading=lazy alt="too many flowers">
+      </div>
+      <div class="col-span-1 md:col-span-2">
+        <img src="public/assets/gallery/2.jpeg" loading=lazy alt="a tall tree without branches">
+      </div>
+      <div class="row-span-2">
+        <img src="public/assets/gallery/10.jpeg" loading=lazy alt="friends talking under the light">
+      </div>
+    </div>
+    </div>
+    <div class="w-full p-4 flex justify-center">
+      <button class="btn bg-gray-500 hover:bg-gray-700  py-2 mx-auto md:py-4 mt-4 font-semibold" v-on:click="clickBack">Back</button>
+    </div>
+    </div>
+      </div>
+    </transition>
+  </div>
     </div>
     
 
