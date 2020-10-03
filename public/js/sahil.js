@@ -9,13 +9,13 @@ var app = new Vue({
     clickGallery: function () {
       this.showIntro = false;
       this.showContact = false;
-      this.showGallery = true;
+      setTimeout(() => {this.showGallery = true;}, 500);
       let body = document.getElementsByTagName("body");
       body.classList.remove("lg:overflow-hidden");
     },
     clickContact: function () {
       this.showIntro = false;
-      this.showContact = true;
+      setTimeout(() => {this.showContact = true;}, 500); 
       this.showGallery = false;
     },
     clickBack: function () {
