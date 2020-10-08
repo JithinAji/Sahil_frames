@@ -1,0 +1,9 @@
+@tailwind base;
+
+@tailwind components;
+
+.btn {
+    @apply  text-white font-bold rounded px-8;
+}
+
+@tailwind utilities;

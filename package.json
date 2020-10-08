@@ -1,0 +1,15 @@
+{
+  "name": "sahil",
+  "version": "1.0.0",
+  "description": "photography website for sahil",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/styles.css -o public/styles.css",
+    "watch": "tailwindcss build src/styles.css -o public/styles.css --watch"
+  },
+  "author": "JithinAji",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^1.7.6"
+  }
+}
