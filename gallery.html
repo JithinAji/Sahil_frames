@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gallery - Sahil P Jose</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="gallery.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  </head>
+  <body>
+    <div class="titleGallery">
+      <a onclick="document.location='main.html'"
+        ><img src="arrow-thin-left.svg" alt="back icon"
+      /></a>
+
+      <h1>GALLERY</h1>
+    </div>
+
+    <div class="gallery">
+      <div class="row">
+        <div class="landscapeBox4">
+          <img
+            class="lozad"
+            src="images/1.jpeg"
+            alt="seedling"
+            class="imglandscape"
+          />
+          <img
+            class="lozad"
+            src="images/2.jpeg"
+            alt="mushrooms"
+            class="imglandscape"
+          />
+          <img
+            class="lozad"
+            src="images/4.jpeg"
+            alt="ballandbat"
+            class="imglandscape"
+          />
+          <img
+            class="lozad"
+            src="images/6.jpeg"
+            alt="field"
+            class="imglandscape"
+          />
+        </div>
+        <div class="portraitBox">
+          <img
+            class="lozad"
+            src="images/3.jpeg"
+            alt="jackfruit"
+            class="imgportrait"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="portraitBox">
+          <img
+            class="lozad"
+            src="images/8.jpeg"
+            alt="flat"
+            class="imgportrait"
+          />
+        </div>
+        <div class="portraitBox">
+          <img
+            class="lozad"
+            src="images/9.jpeg"
+            alt="flowers"
+            class="imgportrait"
+          />
+        </div>
+        <div class="landscapeBox2">
+          <img
+            class="lozad"
+            src="images/7.jpeg"
+            alt="carnival"
+            class="imglandscape"
+          />
+          <img
+            class="lozad"
+            src="images/15.jpeg"
+            alt="flower"
+            class="imglandscape"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="portraitBox4">
+          <img
+            class="lozad"
+            src="images/10.jpeg"
+            alt="friends"
+            class="imgportrait"
+          />
+        </div>
+        <div class="portraitBox4">
+          <img
+            class="lozad"
+            src="images/11.jpeg"
+            alt="palmtree"
+            class="imgportrait"
+          />
+        </div>
+        <div class="portraitBox4">
+          <img
+            class="lozad"
+            src="images/12.jpeg"
+            alt="closeelectrictower"
+            class="imgportrait"
+          />
+        </div>
+        <div class="portraitBox4">
+          <img
+            class="lozad"
+            src="images/13.jpeg"
+            alt="farawayelectrictower"
+            class="imgportrait"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="fullscreenimage">
+      <img src="" id="viewImage" alt="" />
+    </div>
+    <div class="backButton">
+      <button class="button button2" onclick="document.location='main.html'">
+        BACK
+      </button>
+    </div>
+    <div id="overlay"></div>
+    <div class="gallery2"></div>
+    <script>
+      const observer = lozad();
+      observer.observe();
+    </script>
+    <script src="lib/perform.js"></script>
+  </body>
+</html>

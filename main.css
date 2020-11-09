@@ -1,0 +1,179 @@
+h1 {
+  font-size: 1.2rem;
+  font-family: "EB Garamond", serif;
+  color: white;
+}
+h2 {
+  font-size: 3rem;
+  color: white;
+  font-family: "Kaushan Script", cursive;
+  margin-top: 0px;
+}
+.portrait_title {
+  display: none;
+}
+body {
+  height: 100vh;
+  background: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.photo_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#showpic {
+  max-width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#polaroidstack {
+  padding: 5%;
+  width: 450px;
+  height: 500px;
+}
+#backbox1 {
+  height: inherit;
+  width: inherit;
+  background-color: white;
+  border-radius: 2%;
+  position: absolute;
+  transform: rotate(-1deg);
+}
+#backbox2 {
+  height: inherit;
+  width: inherit;
+  background-color: white;
+  border-radius: 2%;
+  position: absolute;
+  transform: rotate(-5deg);
+  box-shadow: 0px 5px 15px black;
+}
+#mainbox {
+  height: inherit;
+  width: inherit;
+  background-color: white;
+  border-radius: 2%;
+  position: absolute;
+  transform: rotate(-15deg);
+  box-shadow: 0px 5px 15px black;
+}
+#mainbox2 {
+  position: absolute;
+  background-color: white;
+  height: 80%;
+  border-radius: 2%;
+  left: 15px;
+  top: 15px;
+  right: 15px;
+  overflow: hidden;
+}
+.info_body {
+  padding: 5%;
+  font-size: 1.5em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-self: stretch;
+  padding-bottom: 5%;
+}
+.socbtn {
+  height: 35px;
+  margin-top: 10px;
+}
+.socbtn:hover {
+  transform: scale(1.1);
+}
+.button {
+  background-color: #f6d53b;
+  font-family: "EB Garamond", serif;
+  font-size: 1rem;
+  border-radius: 2px;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  padding: 0.8rem;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.button:hover {
+  background-color: #ffe881;
+}
+.button:active {
+  background-color: #f5c800;
+}
+.button2 {
+  background-color: whitesmoke;
+  font-size: 0.9rem;
+}
+.button2:hover {
+  background-color: lightgray;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .portrait_title {
+    display: block;
+  }
+  .landscape_title {
+    display: none;
+  }
+  h1 {
+    font-size: 0.8rem;
+    margin-top: 15px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  #polaroidstack {
+    width: 290px;
+    height: 322px;
+  }
+  .info_body,
+  .photo_body {
+    margin-top: 50px;
+  }
+  #mainbox2 {
+    left: 10px;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .portrait_title {
+    display: block;
+  }
+  .landscape_title {
+    display: none;
+  }
+  h1 {
+    font-size: 0.8rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  #polaroidstack {
+    width: 250px;
+    height: 277px;
+  }
+}
