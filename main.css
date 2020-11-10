@@ -91,7 +91,6 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-self: stretch;
-  padding-bottom: 5%;
 }
 .socbtn {
   height: 35px;
