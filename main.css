@@ -130,9 +130,6 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
   }
-  .photo_body {
-    padding-top: 28%;
-  }
   .portrait_title {
     display: block;
   }

@@ -44,18 +44,7 @@ p {
     margin-top: -50px;
   }
   .title img {
-    height: 25px;
-    width: 25px;
-    fill: currentColor;
-    color: white;
-    margin-top: 0.7rem;
-  }
-  .landscape_title {
-    display: block;
-    margin-bottom: 40%;
-  }
-  .photo_body {
-    margin-top: 30%;
+    display: none;
   }
 }
 
