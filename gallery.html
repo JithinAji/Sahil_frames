@@ -15,119 +15,71 @@
       <a onclick="document.location='index.html'"
         ><img src="arrow-thin-left.svg" alt="back icon"
       /></a>
-
       <h1>GALLERY</h1>
     </div>
 
     <div class="gallery">
       <div class="row">
         <div class="landscapeBox4">
+          <img class="lozad imglandscape" src="images/1.jpeg" alt="seedling" />
+          <img class="lozad imglandscape" src="images/2.jpeg" alt="mushrooms" />
           <img
-            class="lozad"
-            src="images/1.jpeg"
-            alt="seedling"
-            class="imglandscape"
-          />
-          <img
-            class="lozad"
-            src="images/2.jpeg"
-            alt="mushrooms"
-            class="imglandscape"
-          />
-          <img
-            class="lozad"
+            class="lozad imglandscape"
             src="images/4.jpeg"
             alt="ballandbat"
-            class="imglandscape"
           />
-          <img
-            class="lozad"
-            src="images/6.jpeg"
-            alt="field"
-            class="imglandscape"
-          />
+          <img class="lozad imglandscape" src="images/6.jpeg" alt="field" />
         </div>
         <div class="portraitBox">
-          <img
-            class="lozad"
-            src="images/3.jpeg"
-            alt="jackfruit"
-            class="imgportrait"
-          />
+          <img class="lozad imgportrait" src="images/3.jpeg" alt="jackfruit" />
         </div>
       </div>
       <div class="row">
         <div class="portraitBox">
-          <img
-            class="lozad"
-            src="images/8.jpeg"
-            alt="flat"
-            class="imgportrait"
-          />
+          <img class="lozad imgportrait" src="images/8.jpeg" alt="flat" />
         </div>
         <div class="portraitBox">
-          <img
-            class="lozad"
-            src="images/9.jpeg"
-            alt="flowers"
-            class="imgportrait"
-          />
+          <img class="lozad imgportrait" src="images/9.jpeg" alt="flowers" />
         </div>
         <div class="landscapeBox2">
-          <img
-            class="lozad"
-            src="images/7.jpeg"
-            alt="carnival"
-            class="imglandscape"
-          />
-          <img
-            class="lozad"
-            src="images/15.jpeg"
-            alt="flower"
-            class="imglandscape"
-          />
+          <img class="lozad imglandscape" src="images/7.jpeg" alt="carnival" />
+          <img class="lozad imglandscape" src="images/15.jpeg" alt="flower" />
         </div>
       </div>
       <div class="row">
         <div class="portraitBox4">
-          <img
-            class="lozad"
-            src="images/10.jpeg"
-            alt="friends"
-            class="imgportrait"
-          />
+          <img class="lozad imgportrait" src="images/10.jpeg" alt="friends" />
+        </div>
+        <div class="portraitBox4">
+          <img class="lozad imgportrait" src="images/11.jpeg" alt="palmtree" />
         </div>
         <div class="portraitBox4">
           <img
-            class="lozad"
-            src="images/11.jpeg"
-            alt="palmtree"
-            class="imgportrait"
-          />
-        </div>
-        <div class="portraitBox4">
-          <img
-            class="lozad"
+            class="lozad imgportrait"
             src="images/12.jpeg"
             alt="closeelectrictower"
-            class="imgportrait"
           />
         </div>
         <div class="portraitBox4">
           <img
-            class="lozad"
+            class="lozad imgportrait"
             src="images/13.jpeg"
             alt="farawayelectrictower"
-            class="imgportrait"
           />
         </div>
       </div>
     </div>
-    <div class="fullscreenimage">
+    <!-- <div id="fullscreenimage">
       <img src="" id="viewImage" alt="" />
+      <img src="close.svg" alt="close button" id="closebutton" />
     </div>
-    <div id="overlay"></div>
-    <div class="gallery2"></div>
+    <div class="container">
+      <p id="closebutton">close</p>
+    </div> -->
+    <div id="overlay">
+      <a href="javascript:closeNav();" class="closebtn">&times;</a>
+      <div id="overlay-content"></div>
+    </div>
     <script>
       const observer = lozad();
       observer.observe();

@@ -130,6 +130,9 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
   }
+  .photo_body {
+    padding-top: 28%;
+  }
   .portrait_title {
     display: block;
   }
@@ -161,6 +164,9 @@ body {
 @media (max-width: 320px) {
   .portrait_title {
     display: block;
+  }
+  .photo_body {
+    padding-top: 20%;
   }
   .landscape_title {
     display: none;
