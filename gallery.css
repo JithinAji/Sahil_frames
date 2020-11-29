@@ -37,13 +37,13 @@ h1 {
 
 #overlay-content {
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  margin-top: 5%;
   background-image: url("images/13.jpeg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  height: 90vh;
+  height: 80vh;
   width: auto;
   max-width: 90vw;
   z-index: 5;
